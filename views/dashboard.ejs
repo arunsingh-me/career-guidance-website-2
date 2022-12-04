@@ -1,10 +1,14 @@
-<h1 class="mt-4">Dashboard</h1>
+<h1 class="mt-4">Redirecting in 2 seconds</h1>
 <p class="lead mb-3">Welcome <%= user.name %></p>
 <h4 id="email">Your email: <%=user.email%></h4>
 <a href="/users/logout" class="btn btn-secondary">Logout</a>
 <a href="/public.html" class="btn btn-primary">Proceed to Career Website</a>
 
 <script>
+  setTimeout(callBack_func, 2000);
+  function callBack_func() {
+    document.location.href = "/public.html";
+  }
   const email = document.getElementById("email").textContent;
   // const count = JSON.parse(localStorage.getItem('key')).count || 0;
   // const user = {
