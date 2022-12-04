@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="img/Logo.png">
+    <title>Quiz Website</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+  <div class="main-div">
+      <div class="inner-div">
+          <h2 class="question" style="font-size:50px">Question comes here</h2>
+          <ul>
+              <li style="list-style: none;margin-top:30px;font-size: 30px;">
+                  <input type="radio" name="answer" id="ans1" class="answer">
+                  <label for="ans1" id="option1">Answer Option</label>
+                  <li style="list-style: none;margin-top: 10px;font-size: 30px;">
+                    <input type="radio" name="answer" id="ans2" class="answer">
+                    <label for="ans2" id="option2">Answer Option</label> 
+                </li>
+                <li style="list-style: none;margin-top: 10px;font-size: 30px;">
+                    <input type="radio" name="answer" id="ans3" class="answer">
+                    <label for="ans3" id="option3">Answer Option</label> 
+                </li> 
+              </li>
+          </ul>
+          <button id="submit" style="color: #003333;">Submit</button>
+          <div id="showscore" class="scoreArea"></div>
+      </div>
+  </div>
+  <script src="quiz_law.js"></script>
+</body>
+</html>
