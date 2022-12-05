@@ -1,8 +1,0 @@
-{
-    "appService.zipIgnorePattern": [
-        "node_modules{,/**}",
-        ".vscode{,/**}"
-    ],
-    "appService.defaultWebAppToDeploy": "/subscriptions/b45d6746-2dae-4f6c-bc51-74eda15fc652/AppServices/subscriptions/b45d6746-2dae-4f6c-bc51-74eda15fc652/resourceGroups/career-guidance-website_group/providers/Microsoft.Web/sites/career-guidance-website",
-    "appService.deploySubpath": "."
-}
