@@ -21,6 +21,19 @@
       href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/cosmo/bootstrap.min.css"
     />
     <title>Career Guidance Website</title>
+    <!-- adding speechly -->
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/@speechly/browser-ui/core/push-to-talk-button.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/@speechly/browser-ui/core/transcript-drawer.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/@speechly/browser-ui/core/intro-popup.js"
+    ></script>
   </head>
 
   <body>
@@ -41,5 +54,29 @@
       integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
       crossorigin="anonymous"
     ></script>
+    <!-- speechly -->
+
+    <push-to-talk-button
+      appid="8bdbf5c7-000d-4dd9-a612-5e4c1b2115c0"
+      intro="Try saying 'Hello'"
+      placement="bottom"
+    >
+    </push-to-talk-button>
+    <transcript-drawer hint='["Try: Hello", "Try: Hi there"]'>
+    </transcript-drawer>
+    <intro-popup>
+      <span slot="priming-body">
+        You'll be able to control the website faster with voice.
+      </span>
+    </intro-popup>
+    <script>
+      document
+        .getElementsByTagName("push-to-talk-button")[0]
+        .addEventListener("speechsegment", (e) => {
+          e.detail.entities.forEach((entity) => {
+            document.getElementById(entity.type).value = entity.value;
+          });
+        });
+    </script>
   </body>
 </html>
